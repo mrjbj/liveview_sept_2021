@@ -1,4 +1,18 @@
 defmodule Echo.Game.Eraser do
+  @moduledoc """
+  Eraser structure includes a :phrase (which is word or phrase to be memorized),
+  along with a :plan, which is a list of "chunks", each containing the precomputed
+  set of letters that will be replaced with a "_" character, to mask the phrase
+  to be memorized.
+
+  new: pass in phrase and steps, will initialize the data structure.
+  calc_plan: returns a chunked list of lists, with "steps" number of chunks
+  get_text: returns the phrase in an eraser struct.
+  erase: takes an eraser struct, destructures it into phrase, current mask, and remaining plan,
+          returns a new/updated eraser struct with smaller plan and phrase containing more "_" characters.
+  replace: takes phrase, turns into letters, compares each letter to position in plan and replaces
+            with "_" character, if position matches.
+  """
   defstruct [:phrase, :plan]
 
   def new(phrase, steps) do

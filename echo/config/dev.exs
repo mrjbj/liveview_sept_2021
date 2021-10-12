@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :echo, Echo.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "Ringo!@5",
   database: "echo_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

@@ -1,4 +1,7 @@
 defmodule Echo.Map.Math do
+  @moduledoc """
+  Implements an increment decrement functions for counter button.
+  """
   def initial, do: 0
 
   def inc(n), do: n + 1

@@ -2,11 +2,11 @@ defmodule Echo.Library do
   @moduledoc """
   The Library context.
   This interacts with the databasee, thus it's a part of boundary.
+  lists all passages, get passage by id, create/update/delete a passage
   """
 
   import Ecto.Query, warn: false
   alias Echo.Repo
-
   alias Echo.Library.Passage
 
   @doc """
@@ -16,7 +16,6 @@ defmodule Echo.Library do
 
       iex> list_passages()
       [%Passage{}, ...]
-
   """
   def list_passages do
     # module that doubles a query that retrieves all data.
